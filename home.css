@@ -1,0 +1,178 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+
+header {
+  background: #9BD1E5;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  padding: 2rem;
+  text-align: center;
+}
+
+#home {
+  background: white;
+  color: black;
+  padding: 5rem 2rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+#projects h2 {
+  margin: 0 auto 20px;
+  max-width: 1200px; 
+  padding-left: 20px; 
+  text-align: left; 
+  font-size: 2rem; 
+}
+
+#projects {
+  width: 100%; 
+  padding: 20px; 
+  background-color: #f4f4f4;
+}
+
+.project-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 20px; 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.project-card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.image-size {
+  width: 300px;
+  height: 150px;
+
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #9BD1E5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #73cff1;
+}
+
+#experience h2 {
+  margin: 0 auto 20px; 
+  max-width: 1200px;
+  padding-left: 20px; 
+  text-align: left; 
+  font-size: 2rem; 
+}
+
+.experience-card {
+  margin: 0 auto 20px; 
+  max-width: 1200px; 
+  padding-left: 50px; 
+  text-align: left; 
+}
+
+.experience-card h3 {
+  margin: 5px 0; 
+  font-size: 1.2em; 
+  line-height: 1.2;
+}
+
+.experience-card .date {
+  margin: 3px 0; 
+  font-size: 1em; 
+  font-style: italic; 
+  color: #9BD1E5;
+}
+
+.experience-card p {
+  margin: 5px 0; 
+  font-size: 1em; 
+  color: #333; 
+}
+
+
+.reach {
+  text-align: center;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.icons {
+  color: black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.symbols {
+  margin: 2rem;
+  color: black;
+}
+
+.symbols:hover {
+  border: 2px solid black;
+  border-radius: 20%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #9BD1E5;
+  color: white;
+}
