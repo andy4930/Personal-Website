@@ -146,6 +146,10 @@ nav ul li a:hover {
   transform: translateX(-50%);
 }
 
+.scroll-down:hover {
+  font-size: 28px;
+}
+
 @keyframes bounce {
   0%, 100% {
       transform: translateY(0);
