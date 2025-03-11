@@ -1,178 +1,215 @@
-
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: black;
   scroll-behavior: smooth;
 }
 
-
+/* Header */
 header {
-  background: #9BD1E5;
-  color: white;
-  padding: 1rem 0;
-  position: sticky;
+  background: lightblue;
+  padding: 25px 0;
+  position: fixed;
+  width: 100%;
   top: 0;
+  left: 0;
   z-index: 1000;
+  text-align: center;
 }
 
 nav ul {
-  display: flex;
-  justify-content: left;
   list-style: none;
+  display: flex;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
 
 nav ul li {
-  margin: 0 1rem;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: white;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  font-size: 20px;
 }
 
-/* Sections */
-.section {
-  padding: 2rem;
+/* Full-Page Sections */
+.full-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
-}
-
-#home {
   background: white;
-  color: black;
-  padding: 5rem 2rem;
+  padding: 20px;
+  position: relative;
 }
 
-.intro h1 {
-  font-size: 2.5rem;
-  margin: 0;
+.full-page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Keeps content left-aligned */
+  height: 100vh;
+  text-align: left;
+  background: white;
+  padding: 20px; /* More padding to shift experience section further right */
+  position: relative;
 }
 
-#projects h2 {
-  margin: 0 auto 20px;
-  max-width: 1200px; 
-  padding-left: 20px; 
-  text-align: left; 
-  font-size: 2rem; 
+/* Home Section */
+#typed-text {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 600px;
+  text-align: center;
+  min-height: 30px;
 }
 
-#projects {
-  width: 100%; 
-  padding: 20px; 
-  background-color: #f4f4f4;
-}
 
+
+/* Project Section */
 .project-grid {
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 20px; 
-  width: 100%; 
-  max-width: 1200px; 
-  margin: 0 auto; 
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Added more spacing */
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .project-card {
-  padding: 20px;
   background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  width: 340px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card h3 {
-  margin-top: 0;
+.project-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.image-size {
-  width: 300px;
-  height: 150px;
-
+.project-img {
+  width: 100%;
+  height: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit:scale-down;
 }
 
 
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #9BD1E5;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 1rem;
+/* Left-Aligned Title */
+.left-align {
+  text-align: left;
+  width: 80%;
+  max-width: 900px;
 }
 
-.btn:hover {
-  background: #73cff1;
+/* Experience Section (Shifted Further Right & Left-Aligned) */
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 900px;
+    padding-left: 100px; /* Moves content further to the right */
 }
 
-#experience h2 {
-  margin: 0 auto 20px; 
-  max-width: 1200px;
-  padding-left: 20px; 
-  text-align: left; 
-  font-size: 2rem; 
+.experience-card hr {
+    width: 500px; /* Extended horizontal line */
+    border: 1px solid black;
 }
 
-.experience-card {
-  margin: 0 auto 20px; 
-  max-width: 1200px; 
-  padding-left: 50px; 
-  text-align: left; 
+/* Bouncing Arrow (Adjusted Position) */
+.scroll-down {
+  position: absolute;
+  bottom: 120px; /* Moved higher to be more visible */
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  font-size: 24px;
+  color: lightblue;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.experience-card h3 {
-  margin: 5px 0; 
-  font-size: 1.2em; 
-  line-height: 1.2;
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
 }
 
-.experience-card .date {
-  margin: 3px 0; 
-  font-size: 1em; 
-  font-style: italic; 
-  color: #9BD1E5;
+/* Contact Section */
+.center-section {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.experience-card p {
-  margin: 5px 0; 
-  font-size: 1em; 
-  color: #333; 
-}
-
 
 .reach {
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
-  color: black;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 10px;
 }
 
 .icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons a {
+  font-size: 24px;
   color: black;
-  text-align: center;
-  font-size: 2rem;
+  transition: color 0.3s;
 }
 
-.symbols {
-  margin: 2rem;
+.icons a:hover {
+  color: lightblue;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background: lightblue;
   color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.symbols:hover {
-  border: 2px solid black;
-  border-radius: 20%;
+.btn:hover {
+  background: #89c2d9;
+  transform: scale(1.05);
 }
 
+/* Footer (At the Bottom) */
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #9BD1E5;
+  padding: 20px;
+  background: lightblue;
   color: white;
+  font-weight: bold;
+  margin-top: 50px;
 }
