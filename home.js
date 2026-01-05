@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const text = "I am a student @ UWA studying Advanced Computer Science. Passionate about technology and cybersecurity.";
+    const text = "IT Analyst. Passionate about technology and cybersecurity.";
     let index = 0;
     let isDeleting = false;
 
