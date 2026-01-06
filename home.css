@@ -134,6 +134,20 @@ nav ul li a:hover {
     border: 1px solid black;
 }
 
+@media (max-width: 768px) {
+
+  .experience-content { 
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .experience-card  {  /* update this selector to match your project item class */
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
 /* Bouncing Arrow (Adjusted Position) */
 .scroll-down {
   position: absolute;
@@ -217,3 +231,4 @@ footer {
   font-weight: bold;
   margin-top: 50px;
 }
+
