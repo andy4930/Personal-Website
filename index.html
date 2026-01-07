@@ -1,102 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script defer src="home.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andy | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="home.css" />
+  <script defer src="home.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="section full-page">
-        <div class="intro">
-            <h1>Hi, I'm Andy!</h1>
-            <p id="typed-text"></p>
-        </div>
-        <div class="scroll-down adjusted-arrow" onclick="scrollToSection('projects')">
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
-    </section>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <section id="projects" class="section full-page">
-        <h2 class="left-align">My Projects</h2>
-        <div class="project-grid center-content">
-            <div class="project-card">
-                <h3>Stud.e</h3>
-                <img src="Stud.e.png" class="image-size project-img" alt="Stud.e">
-                <p>A study website that users can use to make flashcard or use AI to help summarise their notes into flash cards. Developed by Joel Raju, Umar Shaheen and Andy Lee.</p>
-                <a href="https://github.com/JoelRaju403/agileproject" class="btn">View More</a>
-            </div>
-            <div class="project-card">
-                <h3>Snake Logger</h3>
-                <img src="SnakeLogger.png" class="image-size project-img" alt="SnakeLogger">
-                <p>A key logger that logs the keystrokes of its victims and sends the keys to the attacker through a TCP socket connection. On the attacker side, these keys are recorded and stored in a file</p>
-                <a href="https://github.com/andy4930/SnakeLogger" class="btn">View More</a>
-            </div>
-            <div class="project-card">
-                <h3>Multi-Candidate Reverse Diffusion for Adversarial Defence in Speech Command Recognition</h3>
-                <img src="Diffusion Defence.png" class="image-size project-img" alt="Diffusion Defence">
-                <p>A Diffusion Defence model that uses a multi-candidate reverse diffusion process to defend against adversarial attacks in speech command recognition.</p>
-                <a href="https://honourswebsite.vercel.app/" class="btn">View More</a>
-            </div>
-        </div>
-        <div class="scroll-down adjusted-arrow" onclick="scrollToSection('experience')">
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container reveal">
+      <h1>Hi, I'm Andy!</h1>
+      <p>IT Analyst</p>
+    </div>
+  </section>
 
-    <section id="experience" class="section full-page1">
-        <h2 class="left-align">Experience</h2>
-        <div class="experience-content">
-            <div class="experience-card">
-                <h3>Graduate IT Analyst</h3>
-                <h3 class="date">2025 - Present</h3>
-                <p>Alcoa</p>
-                <hr>
-            </div>
-            <div class="experience-card">
-                <h3>Support Worker</h3>
-                <h3 class="date">2024 - Present</h3>
-                <p>Community Access Squad</p>
-                <hr>
-            </div>
-            <div class="experience-card">
-                <h3>App Developer Intern</h3>
-                <h3 class="date">2023-2023</h3>
-                <p>Fiona Stanley Hospital</p>
-                <hr>
-            </div>
-        </div>
-        <div class="scroll-down adjusted-arrow" onclick="scrollToSection('contact')">
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
-    </section>
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="parallax" data-speed="0.2">ABOUT</div>
+    <div class="container reveal">
+      <h2>About Me</h2>
+      <p>I recently graduated from the University of Western Australia with a Bachelor of Advanced Computer Science (Honours). I have a strong passion for technology, cybersecurity, and machine learning.</p>
+      <p>Outside of tech, I enjoy the gym, playing footy and basketball, and exploring outdoors.</p>
+    </div>
+  </section>
 
-    <section id="contact" class="section center-section">
-        <p class="reach">Reach me on these platforms!</p>
-        <div class="icons">
-            <a href="https://www.linkedin.com/in/andy-lee03" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-google"></i></a>
-            <a href="https://github.com/andy4930" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/__andy.l__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="reveal">Projects</h2>
+      <div class="projects-track reveal">
+        <div class="project">
+          <h3>Multi-Candidate Reverse Diffusion</h3>
+          <p>Honours research exploring the use of a diffusion model as a defence against adversarial attacks. Employs a multi-candidate reverse diffusion process.</p>
+          <a href="https://honourswebsite.vercel.app/" class="btn">View More</a>
         </div>
-    </section>
+        <div class="project">
+          <h3>Stud.e</h3>
+          <p>A study website that helps users make flashcards or summarise notes using AI. Developed with Joel Raju & Umar Shaheen.</p>
+          <a href="https://github.com/JoelRaju403/agileproject" class="btn">View More</a>
+        </div>
+        <div class="project">
+          <h3>Snake Logger</h3>
+          <p>A key logger that logs keystrokes and sends them to the attacker through a TCP socket. Keys are recorded and stored on the attacker side.</p>
+          <a href="https://github.com/andy4930/SnakeLogger" class="btn">View More</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2026 Andy Lee. All Rights Reserved.</p>
-    </footer>
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <div class="parallax" data-speed="0.2">EXPERIENCE</div>
+    <div class="container reveal">
+      <h2>Experience</h2>
+      <p><strong>Graduate IT Analyst</strong></p>
+      <p style="color: var(--muted);">2025 - Present<br>Alcoa</p>
+      <p><strong>Support Worker</strong></p>
+      <p style="color: var(--muted);">2024 - Present<br>Community Access Squad</p>
+      <p><strong>App Developer Intern</strong></p>
+      <p style="color: var(--muted);">2023 - 2023<br>Fiona Stanley Hospital</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container reveal">
+      <h2>Reach me on these Platforms!</h2>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/andy-lee03" target="_blank"><i class="fa-brands fa-linkedin" style="color: var(--muted);"></i></a>
+        <a href="#"><i class="fa-brands fa-discord" style="color: var(--muted);"></i></a>
+        <a href="#"><i class="fa-brands fa-google" style="color: var(--muted);"></i></a>
+        <a href="https://github.com/andy4930" target="_blank" style="color: var(--muted);"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/__andy.l__/" target="_blank" style="color: var(--muted);"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Andy
+  </footer>
+
 </body>
 </html>
